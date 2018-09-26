@@ -54,19 +54,6 @@ class SettingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
    
-    /*
-    override func touchesBegan (_ touches: Set<UITouch>,with event: UIEvent?){
-        picker.isHidden = true
-    }
-    */
-    /*
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        if let d = self.delegate {
-            d.indicateSelection(from: fromSelec, to: toSelec)
-        }
-    }
-    */
     @IBAction func fromOp(_ sender: Any) {
         option = "From"
         picker.isHidden = false
@@ -78,8 +65,6 @@ class SettingViewController: UIViewController {
     }
     
     @IBAction func cancel(_ sender: Any) {
-        // viewWillDisappear(false)
-        //self.navigationController!.popViewController(animated: true)
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -87,7 +72,6 @@ class SettingViewController: UIViewController {
         if let d = self.delegate {
             d.indicateSelection(from: fromSelec, to: toSelec)
         }
-         //self.navigationController!.popViewController(animated: true)
         self.dismiss(animated: true, completion: nil)
     }
     
